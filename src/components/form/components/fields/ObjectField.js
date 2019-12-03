@@ -10,9 +10,6 @@ export default function (props) {
     <div className="field object" >
       {Object.keys(schema.properties).map(name => {
         const subSchema = schema.properties[name]
-        // if(subSchema.type==="date"){
-        //   console.log(subSchema)
-        // }
         return (
           <Package
             key={name}

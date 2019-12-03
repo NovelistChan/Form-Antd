@@ -1,19 +1,14 @@
-import React from 'react'
-import { Input } from 'antd'
-import widgets from '../widgets'
-// export default function (props) {
-//   return <input className="field string" type="text" value={props.formData} onChange={e => props.onChange(e.target.value)} />
-// }
+import React from "react";
+import widgets from "../widgets";
 
-export default function (props) {
+export default function(props) {
+  const Widget = widgets.parser("input");
 
-  const Widget = widgets.parser("input")
-  // console.log(Widget)
-  //return <div></div>
   return (
-    <div>
-      <Widget placeholder="Please Input" value={props.formData}
-        onChange={value => props.onChange(value)} />
-    </div>
-  )
+    <Widget
+      placeholder="Please Input"
+      value={props.formData}
+      onChange={value => props.onChange(value)}
+    />
+  );
 }

@@ -1,20 +1,16 @@
-import React from 'react'
-// import { InputNumber } from 'antd'
-import widgets from '../widgets'
-// export default function (props) {
-//   return <input className="field string" type="text" value={props.formData} onChange={e => props.onChange(e.target.value)} />
-// }
+import React from "react";
+import utils from "../utils";
+import widgets from "../widgets";
 
-export default function (props) {
-
-    const Widget = widgets.parser("inputNumber")
-    // console.log(Widget)
-    //return <div></div>
-    return (
-        <div>
-            <Widget placeholder="Please Input" value={props.formData}
-                onChange={value => {props.onChange(value) 
-                console.log(value)}} />
-        </div>
-    )
+export default function(props) {
+  const Widget = widgets.parser("inputNumber");
+  return (
+    <Widget
+      placeholder="Please Input"
+      value={
+        props.formData || props.schema.default || utils.default.parser("number")
+      }
+      onChange={value => props.onChange(value)}
+    />
+  );
 }
