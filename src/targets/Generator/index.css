@@ -1,0 +1,20 @@
+.generator-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 5px;
+}
+
+.generator-editor {
+  grid-column: 0/1;
+  box-shadow: 2px 2px 2px rgb(184, 182, 182);
+}
+
+.generator-template {
+  grid-column: 2/3;
+  box-shadow: 2px 2px 2px rgb(184, 182, 182);
+  padding: 10px;
+}
