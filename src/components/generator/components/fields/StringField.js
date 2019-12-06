@@ -16,16 +16,16 @@ export default function(props) {
         const Widget = _attributes[constraint];
         return (
           <div>
-      <span>{constraint}</span>
+            <span>{constraint}</span>
             <Widget
-            key={constraint}
-            value={schema[constraint]}
-            onChange={data => {
-              let pre = schema;
-              pre[constraint] = data;
-              onChange(pre);
-            }}
-          />
+              key={constraint}
+              value={schema[constraint]}
+              onChange={data => {
+                let pre = schema;
+                pre[constraint] = data;
+                onChange(pre);
+              }}
+            />
           </div>
         );
       })}
