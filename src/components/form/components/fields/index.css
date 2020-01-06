@@ -15,6 +15,12 @@
   border: 1px black solid;
   flex: 1;
 } */
+
+.field.object.row{
+  display: flex;
+  justify-content: space-between;
+}
+
 .editable-cell {
   position: relative;
 }

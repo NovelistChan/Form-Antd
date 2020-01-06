@@ -1,0 +1,1032 @@
+{
+  "type": "object",
+  "title": "empty object",
+  "properties": {
+    "表头": {
+      "type": "object",
+      "layout":"row",
+      "properties": {
+        "填报部门": {
+          "type": "string",
+          "description": "填报部门"
+        },
+        "填报人": {
+          "type": "string",
+          "description": "填报人"
+        },
+        "责任人": {
+          "type": "string",
+          "description": "责任人"
+        },
+        "填表日期": {
+          "type": "string",
+          "format": "date-time",
+          "description": "填表日期"
+        },
+        "报送空表": {
+          "type": "boolean",
+          "description": "报送空表"
+        }
+      },
+      "required": [
+        "填报部门",
+        "填报人",
+        "责任人",
+        "填表日期",
+        "报送空表"
+      ],
+      "description": "表头"
+    },
+    "数据中心(或中心机房)停止服务情况": {
+      "type": "object",
+      "properties": {
+        "30min以内": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "30min以内"
+        },
+        "30-60min": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "30-60min"
+        },
+        "60-120min": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "60-120min"
+        },
+        "120min以上": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "120min以上"
+        }
+      },
+      "required": [
+        "30min以内",
+        "30-60min",
+        "60-120min",
+        "120min以上"
+      ],
+      "description": "数据中心(或中心机房)停止服务情况"
+    },
+    "分支机构停止服务情况": {
+      "type": "object",
+      "properties": {
+        "30min以内": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "30min以内"
+        },
+        "30-60min": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "30-60min"
+        },
+        "60-120min": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "60-120min"
+        },
+        "120min以上": {
+          "type": "object",
+          "properties": {
+            "预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "预期服务情况"
+            },
+            "非预期服务情况": {
+              "type": "object",
+              "properties": {
+                "次数": {
+                  "type": "number",
+                  "description": "次数"
+                },
+                "总时长(分)": {
+                  "type": "number",
+                  "description": "总时长(分)"
+                }
+              },
+              "required": [
+                "总时长(分)",
+                "次数"
+              ],
+              "description": "非预期服务情况"
+            }
+          },
+          "required": [
+            "预期服务情况",
+            "非预期服务情况"
+          ],
+          "description": "120min以上"
+        }
+      },
+      "required": [
+        "30min以内",
+        "30-60min",
+        "60-120min",
+        "120min以上"
+      ],
+      "description": "分支机构停止服务情况"
+    },
+    "重要信息系统停止服务情况": {
+      "type": "object",
+      "properties": {
+        "预期停止服务": {
+          "type": "arrayTable",
+          "columns": {
+            "停止服务性质": {
+              "title": "停止服务性质",
+              "content": {
+                "type": "boolean"
+              }
+            },
+            "信息系统": {
+              "title": "信息系统",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "核心业务系统",
+                  "核心网络系统",
+                  "网上银行系统",
+                  "银行卡系统",
+                  "电话银行系统",
+                  "其他"
+                ]
+              }
+            },
+            "停止服务原因": {
+              "title": "停止服务原因",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "硬件故障",
+                  "软件故障",
+                  "基础设施故障",
+                  "网络故障",
+                  "操作不当",
+                  "内外部攻击",
+                  "其他"
+                ]
+              }
+            },
+            "事件等级": {
+              "title": "事件等级",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "I",
+                  "II",
+                  "III",
+                  "III以下"
+                ]
+              }
+            },
+            "起始时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "结束时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "影响范围": {
+              "title": "影响范围",
+              "content": {
+                "type": "string"
+              }
+            },
+            "描述": {
+              "title": "描述",
+              "content": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "预期停止服务"
+        },
+        "非预期停止服务": {
+          "type": "arrayTable",
+          "columns": {
+            "停止服务性质": {
+              "title": "停止服务性质",
+              "content": {
+                "type": "boolean"
+              }
+            },
+            "信息系统": {
+              "title": "信息系统",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "核心业务系统",
+                  "核心网络系统",
+                  "网上银行系统",
+                  "银行卡系统",
+                  "电话银行系统",
+                  "其他"
+                ]
+              }
+            },
+            "停止服务原因": {
+              "title": "停止服务原因",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "软硬件维护",
+                  "应用系统变更或升级",
+                  "基础设施变更",
+                  "其他"
+                ]
+              }
+            },
+            "起始时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "结束时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "影响范围": {
+              "title": "影响范围",
+              "content": {
+                "type": "string"
+              }
+            },
+            "描述": {
+              "title": "描述",
+              "content": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "非预期停止服务"
+        }
+      },
+      "description": "重要信息系统停止服务情况",
+      "required": [
+        "预期停止服务",
+        "非预期停止服务"
+      ]
+    },
+    "银行、证券跨行业信息系统停止服务": {
+      "type": "object",
+      "properties": {
+        "预期停止服务": {
+          "type": "arrayTable",
+          "columns": {
+            "停止服务性质": {
+              "title": "停止服务性质",
+              "content": {
+                "type": "boolean"
+              }
+            },
+            "信息系统": {
+              "title": "信息系统",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "第三方存管系统",
+                  "基金代销系统",
+                  "基金托管系统",
+                  "其他"
+                ]
+              }
+            },
+            "停止服务原因": {
+              "title": "停止服务原因",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "硬件故障",
+                  "软件故障",
+                  "基础设施故障",
+                  "网络故障",
+                  "操作不当",
+                  "内外部攻击",
+                  "其他"
+                ]
+              }
+            },
+            "事件等级": {
+              "title": "事件等级",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "I",
+                  "II",
+                  "III",
+                  "III以下"
+                ]
+              }
+            },
+            "起始时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "结束时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "影响范围": {
+              "title": "影响范围",
+              "content": {
+                "type": "string"
+              }
+            },
+            "描述": {
+              "title": "描述",
+              "content": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "预期停止服务"
+        },
+        "非预期停止服务": {
+          "type": "arrayTable",
+          "columns": {
+            "停止服务性质": {
+              "title": "停止服务性质",
+              "content": {
+                "type": "boolean"
+              }
+            },
+            "信息系统": {
+              "title": "信息系统",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "第三方存管系统",
+                  "基金代销系统",
+                  "基金托管系统",
+                  "其他"
+                ]
+              }
+            },
+            "停止服务原因": {
+              "title": "停止服务原因",
+              "content": {
+                "type": "string",
+                "enum": [
+                  "软硬件维护",
+                  "应用系统变更或升级",
+                  "基础设施变更",
+                  "其他"
+                ]
+              }
+            },
+            "起始时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "结束时间": {
+              "title": "起始时间",
+              "content": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "影响范围": {
+              "title": "影响范围",
+              "content": {
+                "type": "string"
+              }
+            },
+            "描述": {
+              "title": "描述",
+              "content": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "非预期停止服务"
+        }
+      },
+      "description": "银行、证券跨行业信息系统停止服务",
+      "required": [
+        "预期停止服务",
+        "非预期停止服务"
+      ]
+    },
+    "核心业务系统重要性能指标": {
+      "type": "object",
+      "properties": {
+        "可用性": {
+          "type": "object",
+          "properties": {
+            "系统可用率": {
+              "type": "string",
+              "description": "系统可用率"
+            }
+          },
+          "description": "可用性",
+          "required": [
+            "系统可用率"
+          ]
+        },
+        "批处理": {
+          "type": "object",
+          "properties": {
+            "平均批处理用时": {
+              "type": "string",
+              "description": "平均批处理用时"
+            }
+          },
+          "description": "批处理",
+          "required": [
+            "平均批处理用时"
+          ]
+        },
+        "CPU": {
+          "type": "object",
+          "properties": {
+            "平均使用率": {
+              "type": "string",
+              "description": "平均使用率"
+            },
+            "高峰使用率": {
+              "type": "string",
+              "description": "高峰使用率"
+            }
+          },
+          "description": "CPU",
+          "required": [
+            "平均使用率",
+            "高峰使用率"
+          ]
+        },
+        "内存": {
+          "type": "object",
+          "properties": {
+            "平均使用率": {
+              "type": "string",
+              "description": "平均使用率"
+            }
+          },
+          "description": "内存",
+          "required": [
+            "平均使用率"
+          ]
+        },
+        "磁盘容量": {
+          "type": "object",
+          "properties": {
+            "磁盘占用空间峰值": {
+              "type": "string",
+              "description": "磁盘占用空间峰值"
+            }
+          },
+          "description": "磁盘容量",
+          "required": [
+            "磁盘占用空间峰值"
+          ]
+        },
+        "处理能力": {
+          "type": "object",
+          "properties": {
+            "日均交易笔数(万笔)": {
+              "type": "integer",
+              "description": "日均交易笔数(万笔)"
+            },
+            "日交易笔数峰值(万笔)": {
+              "type": "integer",
+              "description": "日交易笔数峰值(万笔)"
+            },
+            "系统可承载最大交易并发数(笔)": {
+              "type": "integer",
+              "description": "系统可承载最大交易并发数(笔)"
+            },
+            "交易成功率": {
+              "type": "string",
+              "description": "交易成功率"
+            }
+          },
+          "description": "处理能力",
+          "required": [
+            "日均交易笔数(万笔)",
+            "日交易笔数峰值(万笔)",
+            "系统可承载最大交易并发数(笔)",
+            "交易成功率"
+          ]
+        },
+        "账户数及变动": {
+          "type": "object",
+          "properties": {
+            "公司账户及增减": {
+              "type": "object",
+              "properties": {
+                "账户数": {
+                  "type": "integer",
+                  "description": "账户数"
+                },
+                "同比增减": {
+                  "type": "string",
+                  "description": "同比增减"
+                },
+                "环比增减": {
+                  "type": "string",
+                  "description": "环比增减"
+                }
+              },
+              "description": "公司账户及增减",
+              "required": [
+                "账户数",
+                "同比增减",
+                "环比增减"
+              ]
+            },
+            "个人账户及增减": {
+              "type": "object",
+              "properties": {
+                "账户数": {
+                  "type": "integer",
+                  "description": "账户数"
+                },
+                "同比增减": {
+                  "type": "string",
+                  "description": "同比增减"
+                },
+                "环比增减": {
+                  "type": "string",
+                  "description": "环比增减"
+                }
+              },
+              "description": "个人账户及增减",
+              "required": [
+                "账户数",
+                "同比增减",
+                "环比增减"
+              ]
+            }
+          },
+          "description": "账户数及变动",
+          "required": [
+            "公司账户及增减",
+            "个人账户及增减"
+          ]
+        }
+      },
+      "description": "核心业务系统重要性能指标",
+      "required": [
+        "可用性",
+        "批处理",
+        "CPU",
+        "内存",
+        "磁盘容量",
+        "处理能力",
+        "账户数及变动"
+      ]
+    },
+    "核心网络运行情况": {
+      "type": "object",
+      "properties": {
+        "业务时段平均带宽占用情况（生产中心或中心机房到一级分支机构）": {
+          "type": "string",
+          "description": "业务时段平均带宽占用情况（生产中心或中心机房到一级分支机构）",
+          "enum": [
+            "50%以下",
+            "50%-80%",
+            "80%以上"
+          ]
+        },
+        "业务时段平均带宽占用情况（互联网出口）": {
+          "type": "string",
+          "description": "业务时段平均带宽占用情况（互联网出口）",
+          "enum": [
+            "50%以下",
+            "50%-80%",
+            "80%以上"
+          ]
+        }
+      },
+      "description": "核心网络运行情况",
+      "required": [
+        "业务时段平均带宽占用情况（生产中心或中心机房到一级分支机构）",
+        "业务时段平均带宽占用情况（互联网出口）"
+      ]
+    },
+    "网上银行系统运行情况": {
+      "type": "object",
+      "properties": {
+        "日均交易笔数(万笔)": {
+          "type": "integer",
+          "description": "日均交易笔数(万笔)"
+        },
+        "日交易笔数峰值(万笔)": {
+          "type": "integer",
+          "description": "日交易笔数峰值(万笔)"
+        },
+        "系统可承载的最大交易并发数(笔)": {
+          "type": "integer",
+          "description": "系统可承载的最大交易并发数(笔)"
+        },
+        "平均在线并发用户数(户)": {
+          "type": "integer",
+          "description": "平均在线并发用户数(户)"
+        },
+        "最大在线并发用户数(户)": {
+          "type": "integer",
+          "description": "最大在线并发用户数(户)"
+        },
+        "系统可承载的最大在线并发数(户)": {
+          "type": "integer",
+          "description": "系统可承载的最大在线并发数(户)"
+        }
+      },
+      "description": "网上银行系统运行情况",
+      "required": [
+        "日均交易笔数(万笔)",
+        "日交易笔数峰值(万笔)",
+        "系统可承载的最大交易并发数(笔)",
+        "平均在线并发用户数(户)",
+        "最大在线并发用户数(户)",
+        "系统可承载的最大在线并发数(户)"
+      ]
+    },
+    "银行卡系统运行情况": {
+      "type": "object",
+      "properties": {
+        "日均交易笔数(万笔)": {
+          "type": "integer",
+          "description": "日均交易笔数(万笔)"
+        },
+        "日交易笔数峰值(万笔)": {
+          "type": "integer",
+          "description": "日交易笔数峰值(万笔)"
+        },
+        "系统可承载的最大交易并发数(笔)": {
+          "type": "integer",
+          "description": "系统可承载的最大交易并发数(笔)"
+        }
+      },
+      "description": "银行卡系统运行情况",
+      "required": [
+        "field_28",
+        "field_29",
+        "field_30",
+        "日均交易笔数(万笔)",
+        "日交易笔数峰值(万笔)",
+        "系统可承载的最大交易并发数(笔)"
+      ]
+    },
+    "第三方存管系统运行情况": {
+      "type": "object",
+      "properties": {
+        "日均交易笔数(万笔)": {
+          "type": "integer",
+          "description": "日均交易笔数(万笔)"
+        },
+        "日交易笔数峰值(万笔)": {
+          "type": "integer",
+          "description": "日交易笔数峰值(万笔)"
+        },
+        "系统可承载的最大交易并发数(笔)": {
+          "type": "integer",
+          "description": "系统可承载的最大交易并发数(笔)"
+        }
+      },
+      "description": "第三方存管系统运行情况",
+      "required": [
+        "日均交易笔数(万笔)",
+        "日交易笔数峰值(万笔)",
+        "系统可承载的最大交易并发数(笔)"
+      ]
+    }
+  },
+  "required": [
+    "表头",
+    "数据中心(或中心机房)停止服务情况",
+    "分支机构停止服务情况",
+    "重要信息系统停止服务情况",
+    "银行、证券跨行业信息系统停止服务",
+    "核心业务系统重要性能指标",
+    "核心网络运行情况",
+    "网上银行系统运行情况",
+    "银行卡系统运行情况",
+    "第三方存管系统运行情况"
+  ],
+  "description": "重要信息系统运行情况"
+}
