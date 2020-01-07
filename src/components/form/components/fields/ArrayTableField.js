@@ -4,17 +4,30 @@ import Package from '../Package'
 import { Table, Input, Button, Popconfirm, Form } from 'antd'
 
 class ArrayTableField extends React.Component {
+  // componentDidMount(){
+    
+  //   let formData = this.props.formData
+  //   formData.push(this.props.schema.default || utils.default.parser("arrayTableItem"))
+  //   this.props.onChange(formData)
+  // }
+
   render() {
 
     const { schema, formData } = this.props
-
+    if (!this.props.formData[0]) {
+      formData.push(this.props.schema.default || utils.default.parser("arrayTableItem"))
+    }
     return (
       <div>
-        <Button onClick={this.handleAdd} type="primary">Add</Button>
-        <Table columns={this.columnsParser(schema.columns)} 
-        dataSource={formData || schema.default || utils.default.parser("arrayTable")}
-        scroll = {{x:1500, y:300}} 
-        rowKey = {schema.key}
+        {(schema.editable == "true") && <Button onClick={this.handleAdd} type="primary">Add</Button>}
+        {/* {(schema.editable == "false")&&this.handleAdd} */}
+        <Table
+          bordered={true}
+          columns={this.columnsParser(schema.columns)}
+          dataSource={formData || schema.default || utils.default.parser("arrayTable")}
+          scroll={{ x: 1500, y: 300 }}
+          rowKey={schema.key}
+          pagination={(schema.editable == "true" ? true : false)}
         />
       </div>
     )
@@ -37,7 +50,7 @@ class ArrayTableField extends React.Component {
     let basic = Object.keys(columns).map(column => ({
       dataIndex: column,
       title: columns[column].title,
-      width:  columns[column].width || 200,
+      width: columns[column].width || 200,
       render: (d, _, index) => (
         <Package
           global={global}
@@ -50,27 +63,30 @@ class ArrayTableField extends React.Component {
             // console.log("parse", formData, data)
           }} />)
     }))
-    basic.unshift({
-      title: "序号",
-      width: 100,
-      fixed: 'left',
-      render: (_, record, index) => (
-        <div>
-          <span>{index}</span>
-        </div>
-      )
-    })
-    basic.push({
-      title: "选项",
-      width: 100,
-      fixed: 'right',
-      render: (_, record, index) => (
-        <div>
-          <Button onClick={_ => this.handleDel(index)}>Delete</Button>
-          {/* <span>{index}</span> */}
-        </div>
-      )
-    })
+    if (this.props.schema.editable == "true") {
+      basic.unshift({
+        title: "序号",
+        width: 100,
+        fixed: 'left',
+        render: (_, record, index) => (
+          <div>
+            <span>{index}</span>
+          </div>
+        )
+      })
+      basic.push({
+        title: "选项",
+        width: 100,
+        fixed: 'right',
+        render: (_, record, index) => (
+          <div>
+            <Button onClick={_ => this.handleDel(index)}>Delete</Button>
+            {/* <span>{index}</span> */}
+          </div>
+        )
+      })
+    }
+    
     return basic
   }
 

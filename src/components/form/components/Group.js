@@ -21,13 +21,15 @@ class Group extends React.Component {
         datas[group] = {}
       }
       groups[group].properties[property] = schema.properties[property]
+      // console.log(property," : ", groups[group].properties[property])
       datas[group][property] = formData[property]
     })
 
+    // console.log("group", groups[0].properties)
     return (
       <Collapse defaultActiveKey={["default"]}>
         {Object.keys(groups).map(group => (
-          <Panel key={group}>
+          <Panel key={group} header={Object.keys(groups[group].properties)[0]}>
             <Form
               schema={groups[group]}
               formData={datas[group]}

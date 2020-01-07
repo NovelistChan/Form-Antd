@@ -4,6 +4,7 @@
   "properties": {
     "表头": {
       "type": "object",
+      "group": "0",
       "layout":"row",
       "properties": {
         "填报部门": {
@@ -434,6 +435,7 @@
       "properties": {
         "预期停止服务": {
           "type": "arrayTable",
+          "editable": "false",
           "columns": {
             "停止服务性质": {
               "title": "停止服务性质",
@@ -587,6 +589,7 @@
       "properties": {
         "预期停止服务": {
           "type": "arrayTable",
+          "editable": "true",
           "columns": {
             "停止服务性质": {
               "title": "停止服务性质",
