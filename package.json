@@ -1,5 +1,5 @@
 {
-  "name": "form-antd",
+  "name": "form-antd-local",
   "main": "dist/main.js",
   "version": "0.1.8",
   "dependencies": {
