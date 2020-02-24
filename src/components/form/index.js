@@ -5,10 +5,9 @@ import Group from './components/Group'
 import utils from './components/utils'
 
 // import "./components/themes/default.css"
-import "antd/dist/antd.css"
+// import "antd/dist/antd.css"
 
-export default function (props) {
-
+export default function(props) {
   const { extensions = {} } = props
   fields.register(extensions.fields || {})
   utils.default.register(extensions.default || {})
